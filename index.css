@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #4a4455;
+    font-family: sans-serif;
+}
+.calendar{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    width: 800px;
+    height: 500px;
+    border: 15px solid rgb(73, 84, 92);
+    position: relative;
+    box-shadow: 0 15px 35px rgba(37, 20, 20, 0.9);
+}
+.calendar .date{
+    width: 400px;
+    padding: 30px;
+    border: 1px solid rgb(57, 57, 70);
+    margin-left:-16px;
+    
+}
+.calendar .date h1{
+    text-align: center;
+    font-size: 28px;
+    padding: 0;
+    margin: 0 0 20px;
+    font-weight: 500;
+    color: rgb(119, 92, 87);
+
+}
+.calendar .date .days{
+    display: flex;
+    flex-wrap: wrap;
+}
+.calendar .date .days .day{
+    margin-bottom: 5px;
+    font-size: 22px;
+    padding-bottom: 10px;
+
+} 
+.calendar .date .days .day,
+.calendar .date .days .number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    width: 48px;
+    padding: 2px;
+}
+.calendar .date .days .day:nth-child(1),
+.calendar .date .days .number:nth-child(7n + 1){
+   color: red;
+   font-size: 700;
+}
+.calendar .date .days .number.active{
+    color: rgb(65, 51, 51);
+    border-radius: 50%;
+    border:1px solid rgb(27, 38, 53);
+    background: wheat;
+    cursor: pointer;
+}
+.calendar .image{
+    width: 400px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #000;
+
+}
+.calendar .image img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
